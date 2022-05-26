@@ -2,6 +2,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Intents, Collection } = require('discord.js');
 const dotenv = require("dotenv")
+const creds = require('./uptop-candidate-sheet-fa70f955bd8a.json')
+
 dotenv.config()
 const BOT_KEY = process.env.BOT_KEY;
 // const APPLICATION_ID = process.env.APPLICATION_ID;
