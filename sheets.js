@@ -16,9 +16,7 @@ async function main() {
     
     const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
     console.log(sheet.title);
-    await sheet.setHeaderRow(['Name', 'Location'])
-    await sheet.clearRows();
-    // await sheet.addRow(['Joey', 'Denver'])
+    await sheet.addRow(['Joey', 'Denver'])
 
 };
 
