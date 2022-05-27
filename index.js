@@ -1,15 +1,15 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Intents, Collection } = require('discord.js');
-const dotenv = require("dotenv")
-const creds = require('./uptop-candidate-sheet-fa70f955bd8a.json')
-
-dotenv.config()
+require("dotenv").config();
 const BOT_KEY = process.env.BOT_KEY;
-// const APPLICATION_ID = process.env.APPLICATION_ID;
-// const GUILD_ID = process.env.GUILD_ID;
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
+const client = new Client({ 
+	intents: [
+		Intents.FLAGS.GUILDS,
+		Intents.FLAGS.GUILD_MESSAGES
+	] 
+});
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');

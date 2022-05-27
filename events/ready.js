@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'ready',
 	once: true,
-	execute(client) {
+	async execute(client, commands) {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 	},
 };
